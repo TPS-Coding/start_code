@@ -1,9 +1,19 @@
 import pygame
 from settings import *
 
+
+
 class Sprite(pygame.sprite.Sprite):
     def __init__(self, groups, surf, pos, collision_sprites=None):
         super().__init__(groups)
+
+        self.image = surf
+        self.rect = self.image.get_frect(center = pos)
+
+
+class Player(Sprite):
+    def __init__(self, groups, surf, pos, collision_sprites=None):
+        super().__init__(groups, surf, pos, collision_sprites=None)
 
         self.image = surf
         self.rect = self.image.get_frect(center = pos)
