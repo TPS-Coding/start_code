@@ -12,6 +12,10 @@ class Game():
         pygame.display.set_caption("MY PYTHON GAME")
         self.clock = pygame.time.Clock()
         self.running = True
+
+
+        ### groups
+        self.all_sprites = pygame.sprite.Group()
         
 
 
